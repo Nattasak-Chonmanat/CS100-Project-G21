@@ -1,48 +1,51 @@
-<html lang="en"><head>
+<html lang="en">
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
   <title>Forms - CSTU Passport</title>
-  <link rel="stylesheet" href="../css/style-from.css">
+  <link rel="stylesheet" href="../css/style-form.css">
 </head>
+
 <body>
   <div class="container">
     <div class="navbar">
       <div class="header">
-          <h1>
-              <a href="../index.html">CSTU Passport</a>
-          </h1>
+        <h1>
+          <a href="../index.html">CSTU Passport</a>
+        </h1>
       </div>
       <div class="menu">
-          <div class="dropdown">
-              <button class="drop-btn">About Us
-                  <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="#">Chanapon Kongpiw</a>
-                <a href="#">Chitipat Jampa</a>
-                <a href="#">Nattasak Chonmnat</a>
-              </div> 
+        <div class="dropdown">
+          <button class="drop-btn">About Us
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Chanapon Kongpiw</a>
+            <a href="#">Chitipat Jampa</a>
+            <a href="#">Nattasak Chonmnat</a>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
   </div>
 
 
 
   <!-- Form Container -->
-  <div class="form-container" >
+  <div class="form-container">
     <h1>CSTU Passport</h1>
     <!-- Main Form -->
-    <form id="myForm" action="#" method="post" onsubmit="show()" >
+    <form id="myForm" action="#" method="post" onsubmit="show()">
       <!-- Firstname and Lastname Field -->
       <div class="form-group">
         <label for="fullname">Firstname and Lastname</label>
-        <input type="text" id="fullname" onblur="upper()" name="fullname" onfocus="colorr(this.id)" >
+        <input type="text" id="fullname" onblur="upper()" name="fullname" onfocus="colorr(this.id)">
         <small>Only enter your first name and last name, middle name is not necessary.</small>
         <span id="fullnameError" class="error"></span>
       </div>
-      
+
       <!-- Student ID Field -->
       <div class="form-group">
         <label for="studentID">Student ID</label>
@@ -50,7 +53,7 @@
         <small>Please enter your 10-digit student ID.</small>
         <span id="studentIDError" class="error"></span>
       </div>
-      
+
       <!-- University Email Field -->
       <div class="form-group">
         <label for="email">University Email</label>
@@ -68,9 +71,16 @@
       <!-- Type of Work/Activity Field -->
       <div class="form-group">
         <label for="activityType">Type of Work/Activity</label>
-        <select id="activityType" name="activityType"  onfocus="colorr(this.id)">
+        <select id="activityType" name="activityType" onfocus="colorr(this.id)">
           <option value="" disabled="" selected="">Select an option</option>
-        <option value="1">Course</option><option value="2">Activity</option><option value="3">Work</option><option value="4">Research</option><option value="5">Sports</option><option value="6">Competition</option><option value="7">Computer Science</option></select>
+          <option value="1">Course</option>
+          <option value="2">Activity</option>
+          <option value="3">Work</option>
+          <option value="4">Research</option>
+          <option value="5">Sports</option>
+          <option value="6">Competition</option>
+          <option value="7">Computer Science</option>
+        </select>
       </div>
       <!-- <div class="form-group">
         <label for="activityType">Type of Work/Activity</label>
@@ -123,7 +133,7 @@
       <!-- End Date/Time Field -->
       <div class="form-group">
         <label for="endDate">End Date/Time</label>
-        <input type="datetime-local" id="endDate" name="endDate" onfocus="colorr(this.id)" >
+        <input type="datetime-local" id="endDate" name="endDate" onfocus="colorr(this.id)">
       </div>
 
       <!-- Location Field -->
@@ -146,14 +156,16 @@
 
       <!-- Submit Button -->
       <div class="form-group">
-        <input type="submit" value="Submit" >
+        <input type="submit" value="Submit">
       </div>
     </form>
   </div>
-  <p ></p>
+  <p></p>
   <div class="show">
-    <p id ="demo" style="color: rgb(0, 0, 0);" ></p>
-    456
+    <!-- Display image -->
+    <img id="displayedImage" alt="Displayed Image">
+    
+    <p id="demo" style="color: rgb(0, 0, 0);"></p>
   </div>
   <div>
     <footer>@CSTU 2023</footer>
@@ -162,4 +174,6 @@
   <script src="../js/script.js"></script>
 
 
-</body></html>
+</body>
+
+</html>

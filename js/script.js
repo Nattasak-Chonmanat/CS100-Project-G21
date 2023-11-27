@@ -12,14 +12,62 @@ const config = {
 const port = 8000;
 
 function show() {
-    document.getElementById("demo").innerHTML = "Hello World";
+
+  // Get form elements by their IDs
+  var fullName = document.getElementById("fullname").value;
+  var studentID = document.getElementById("studentID").value;
+  var email = document.getElementById("email").value;
+  var workTitle = document.getElementById("workTitle").value;
+  var activityType = document.getElementById("activityType").options[document.getElementById("activityType").selectedIndex].text; // Get selected option text
+  var academicYear = document.getElementById("academicYear").value;
+  var semester = document.getElementById("semester").value;
+  var startDate = document.getElementById("startDate").value;
+  var endDate = document.getElementById("endDate").value;
+  var location = document.getElementById("location").value;
+  var picture = document.getElementById("picture").files[0]; // Get the file object
+  var description = document.getElementById("description").value;
+
+  // Create a string with the gathered information
+  var output = "<strong><span style='color: black;'>Full Name:</span></strong> " + fullName +
+    "<br><strong><span style='color: black;'>Student ID:</span></strong> " + studentID +
+    "<br><strong><span style='color: black;'>Email:</span></strong> " + email +
+    "<br><strong><span style='color: black;'>Work/Activity Title:</span></strong> " + workTitle +
+    "<br><strong><span style='color: black;'>Type of Work/Activity:</span></strong> " + activityType +
+    "<br><strong><span style='color: black;'>Academic Year:</span></strong> " + academicYear +
+    "<br><strong><span style='color: black;'>Semester:</span></strong> " + semester +
+    "<br><strong><span style='color: black;'>Start Date/Time:</span></strong> " + startDate +
+    "<br><strong><span style='color: black;'>End Date/Time:</span></strong> " + endDate +
+    "<br><strong><span style='color: black;'>Location:</span></strong> " + location +
+    "<br><strong><span style='color: black;'>Description:</span></strong> " + description;
+
+  // Display the image on the page
+  displayImage(picture);
+
+  document.getElementById("demo").innerHTML = output;
+
+
 }
+
+function displayImage(imageFile) {
+  var displayedImage = document.getElementById("displayedImage");
+  if (imageFile) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      displayedImage.src = e.target.result;
+    };
+    reader.readAsDataURL(imageFile);
+  } else {
+    displayedImage.src = ""; // Clear the image if no file selected
+  }
+}
+
+
 function colorr(x) {
-    document.getElementById(x).style.background = "silver";
+  document.getElementById(x).style.background = "silver";
 }
 function upper() {
-    let x = document.getElementById("fullname");
-    x.value = x.value.toUpperCase();
+  let x = document.getElementById("fullname");
+  x.value = x.value.toUpperCase();
 }
 
 // Function to validate Firstname and Lastname
@@ -172,6 +220,7 @@ async function submitForm(event) {
       alert(responseData.message + "\n" + formattedData);
 
       document.getElementById("myForm").reset();
+
     } else {
       console.error("Failed to submit form data.");
 
@@ -182,8 +231,8 @@ async function submitForm(event) {
     console.error("An error occurred while submitting form data:", error);
   }
   function myFunction(x) {
-  document.getElementById(x).style.background = "yellow";
-}
+    document.getElementById(x).style.background = "yellow";
+  }
 }
 
 // Event listener for form submission
@@ -195,3 +244,4 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+
