@@ -1,0 +1,165 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+  <title>Forms - CSTU Passport</title>
+  <link rel="stylesheet" href="../css/style-from.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="header">
+          <h1>
+              <a href="../index.html">CSTU Passport</a>
+          </h1>
+      </div>
+      <div class="menu">
+          <div class="dropdown">
+              <button class="drop-btn">About Us
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Chanapon Kongpiw</a>
+                <a href="#">Chitipat Jampa</a>
+                <a href="#">Nattasak Chonmnat</a>
+              </div> 
+          </div>
+      </div>
+  </div>
+  </div>
+
+
+
+  <!-- Form Container -->
+  <div class="form-container" >
+    <h1>CSTU Passport</h1>
+    <!-- Main Form -->
+    <form id="myForm" action="#" method="post" onsubmit="show()" >
+      <!-- Firstname and Lastname Field -->
+      <div class="form-group">
+        <label for="fullname">Firstname and Lastname</label>
+        <input type="text" id="fullname" onblur="upper()" name="fullname" onfocus="colorr(this.id)" >
+        <small>Only enter your first name and last name, middle name is not necessary.</small>
+        <span id="fullnameError" class="error"></span>
+      </div>
+      
+      <!-- Student ID Field -->
+      <div class="form-group">
+        <label for="studentID">Student ID</label>
+        <input type="text" id="studentID" name="studentID" onfocus="colorr(this.id)">
+        <small>Please enter your 10-digit student ID.</small>
+        <span id="studentIDError" class="error"></span>
+      </div>
+      
+      <!-- University Email Field -->
+      <div class="form-group">
+        <label for="email">University Email</label>
+        <input type="email" id="email" name="email" onfocus="colorr(this.id)">
+        <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
+        <span id="emailError" class="error"></span>
+      </div>
+
+      <!-- Work/Activity Title Field -->
+      <div class="form-group">
+        <label for="workTitle">Work/Activity Title</label>
+        <input type="text" id="workTitle" name="workTitle" onfocus="colorr(this.id)">
+      </div>
+
+      <!-- Type of Work/Activity Field -->
+      <div class="form-group">
+        <label for="activityType">Type of Work/Activity</label>
+        <select id="activityType" name="activityType"  onfocus="colorr(this.id)">
+          <option value="" disabled="" selected="">Select an option</option>
+        <option value="1">Course</option><option value="2">Activity</option><option value="3">Work</option><option value="4">Research</option><option value="5">Sports</option><option value="6">Competition</option><option value="7">Computer Science</option></select>
+      </div>
+      <!-- <div class="form-group">
+        <label for="activityType">Type of Work/Activity</label>
+        <select id="activityType" name="activityType">
+          <option value="" disabled selected>Select an option</option>
+          <option value="Course">Course</option>
+          <option value="Activity">Activity</option>
+          <option value="Work">Work</option>
+          <option value="Research">Research</option>
+          <option value="Sports">Sports</option>
+          <option value="Competition">Competition</option>
+          <option value="Computer Science">Computer Science</option>
+        </select>
+      </div> -->
+
+      <!-- Academic Year Field -->
+      <div class="form-group">
+        <label for="academicYear">Academic Year</label>
+        <select id="academicYear" name="academicYear" onfocus="colorr(this.id)">
+          <option value="" disabled="" selected="">Select an option</option>
+          <option value="2561">2561</option>
+          <option value="2562">2562</option>
+          <option value="2563">2563</option>
+          <option value="2564">2564</option>
+          <option value="2565">2565</option>
+          <option value="2566">2566</option>
+          <option value="2567">2567</option>
+          <option value="2568">2568</option>
+          <option value="2569">2569</option>
+        </select>
+      </div>
+
+      <!-- Semester Field -->
+      <div class="form-group">
+        <label for="semester">Semester</label>
+        <select id="semester" name="semester" onfocus="colorr(this.id)">
+          <option value="" disabled="" selected="">Select an option</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="Summer">Summer</option>
+        </select>
+      </div>
+
+      <!-- Start Date/Time Field -->
+      <div class="form-group">
+        <label for="startDate">Start Date/Time</label>
+        <input type="datetime-local" id="startDate" name="startDate" onfocus="colorr(this.id)">
+      </div>
+
+      <!-- End Date/Time Field -->
+      <div class="form-group">
+        <label for="endDate">End Date/Time</label>
+        <input type="datetime-local" id="endDate" name="endDate" onfocus="colorr(this.id)" >
+      </div>
+
+      <!-- Location Field -->
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" onfocus="colorr(this.id) ">
+      </div>
+
+      <!-- image Field -->
+      <div class="form-group">
+        <label for="image">image</label>
+        <input type="file" name="picture" id="picture" accept="image/*">
+      </div>
+
+      <!-- Description Field -->
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" onfocus="colorr(this.id)"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Submit" >
+      </div>
+    </form>
+  </div>
+  <p ></p>
+  <div class="show">
+    <p id ="demo" style="color: rgb(0, 0, 0);" ></p>
+    456
+  </div>
+  <div>
+    <footer>@CSTU 2023</footer>
+  </div>
+  <!-- JavaScript -->
+  <script src="../js/script.js"></script>
+
+
+</body></html>
