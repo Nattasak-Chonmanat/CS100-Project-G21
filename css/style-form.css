@@ -24,9 +24,9 @@ body {
 
 /* Styling for the form container */
 .form-container {
-  max-width: 600px;
+  width: 90%;
   margin: 20px auto;
-  background-color: rgb(75, 59, 45);
+  background-color: #191919;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -70,16 +70,22 @@ body {
 /* Styling for select dropdowns */
 .form-group select {
   width: 100%;
+  color: black;
 }
 
 /* Styling for the submit button */
 .form-group input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #007acc;
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+.form-group input[type= "submit"]:hover {
+  opacity: 0.4;
 }
 
 /* Styling for small helper text */
@@ -103,7 +109,7 @@ body {
 }
 
 .show {
-  max-width: 900px;
+  width: 90%;
   margin: 20 auto;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
@@ -112,10 +118,17 @@ body {
   border-radius: 5px;
 }
 
+#displayedImage {
+  width: 100%;
+  height: 30%;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
 .navbar {
   background: #111111;
   height: 100px;
-  margin-bottom: 20%;
+  margin-bottom: 5%;
 }
 
 .header {
@@ -123,14 +136,12 @@ body {
   color: whitesmoke;
   width: 100%;
   height: 50px;
-  margin-top: 5%;
-  margin-left: 3%;
-  margin-bottom: 3%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15%;
 }
 
 .menu button {
@@ -186,7 +197,6 @@ body {
   border-radius: 5px;
 }
 
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -220,12 +230,6 @@ a {
 
 a:hover {
   opacity: 0.5;
-}
-
-.navbar {
-  background: #111111;
-  height: 120px;
-  margin-bottom: 20%;
 }
 
 .header {
@@ -374,11 +378,10 @@ footer {
   }
 
   .menu {
-    margin-top: 25px;
+    margin-top: 3%;
     display: flex;
     flex-direction: row;
     justify-content: end;
-    align-items: center;
   }
 
   .menu button {
@@ -404,6 +407,22 @@ footer {
     margin-right: 18px;
   }
 
+  .form-container {
+    width: 40%;
+  }
+
+  .show {
+    width: 40%;
+  }
+
+  #displayedImage {
+    width: 100%;
+    height: 40%;
+  }
+
+  .container {
+    margin-bottom: 5%;
+  }
 }
 
 /* for Tablet */
@@ -424,6 +443,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: end;
+    margin-top: 10px;
   }
 
   .menu button {
@@ -440,4 +460,21 @@ footer {
     margin-right: 18px;
   }
 
+  .container {
+    margin-bottom: 5%;
+  }
+
+  .form-container {
+    width: 60%;
+  }
+
+  .show {
+    width: 60%;
+  }
+
+  #displayedImage {
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+  }
 }
