@@ -46,38 +46,38 @@
     <form id="myForm" action="#" method="post" onsubmit="show()">
       <!-- Firstname and Lastname Field -->
       <div class="form-group">
-        <label for="fullname">Firstname and Lastname</label>
-        <input type="text" id="fullname" onblur="upper()" name="fullname" onfocus="colorr(this.id)">
+        <label for="fullname">Firstname and Lastname *</label>
+        <input type="text" id="fullname" onblur="upper()" name="fullname" onfocus="colorr(this.id)" required>
         <small>Only enter your first name and last name, middle name is not necessary.</small>
         <span id="fullnameError" class="error"></span>
       </div>
 
       <!-- Student ID Field -->
       <div class="form-group">
-        <label for="studentID">Student ID</label>
-        <input type="text" id="studentID" name="studentID" onfocus="colorr(this.id)">
+        <label for="studentID">Student  *</label>
+        <input type="text" id="studentID" name="studentID" onfocus="colorr(this.id)" required>
         <small>Please enter your 10-digit student ID.</small>
         <span id="studentIDError" class="error"></span>
       </div>
 
       <!-- University Email Field -->
       <div class="form-group">
-        <label for="email">University Email</label>
-        <input type="email" id="email" name="email" onfocus="colorr(this.id)">
+        <label for="email">University Email *</label>
+        <input type="email" id="email" name="email" onfocus="colorr(this.id)" required>
         <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
         <span id="emailError" class="error"></span>
       </div>
 
       <!-- Work/Activity Title Field -->
       <div class="form-group">
-        <label for="workTitle">Work/Activity Title</label>
-        <input type="text" id="workTitle" name="workTitle" onfocus="colorr(this.id)">
+        <label for="workTitle">Work/Activity Title *</label>
+        <input type="text" id="workTitle" name="workTitle" onfocus="colorr(this.id)" required>
       </div>
 
       <!-- Type of Work/Activity Field -->
       <div class="form-group">
-        <label for="activityType">Type of Work/Activity</label>
-        <select id="activityType" name="activityType" onfocus="colorr(this.id)">
+        <label for="activityType">Type of Work/Activity *</label>
+        <select id="activityType" name="activityType" onfocus="colorr(this.id)" required>
           <option value="" disabled="" selected="">Select an option</option>
           <option value="1">Course</option>
           <option value="2">Activity</option>
@@ -104,8 +104,8 @@
 
       <!-- Academic Year Field -->
       <div class="form-group">
-        <label for="academicYear">Academic Year</label>
-        <select id="academicYear" name="academicYear" onfocus="colorr(this.id)">
+        <label for="academicYear">Academic Year *</label>
+        <select id="academicYear" name="academicYear" onfocus="colorr(this.id)" required>
           <option value="" disabled="" selected="">Select an option</option>
           <option value="2561">2561</option>
           <option value="2562">2562</option>
@@ -121,8 +121,8 @@
 
       <!-- Semester Field -->
       <div class="form-group">
-        <label for="semester">Semester</label>
-        <select id="semester" name="semester" onfocus="colorr(this.id)">
+        <label for="semester">Semester *</label>
+        <select id="semester" name="semester" onfocus="colorr(this.id)" required>
           <option value="" disabled="" selected="">Select an option</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -132,26 +132,26 @@
 
       <!-- Start Date/Time Field -->
       <div class="form-group">
-        <label for="startDate">Start Date/Time</label>
-        <input type="datetime-local" id="startDate" name="startDate" onfocus="colorr(this.id)">
+        <label for="startDate">Start Date/Time *</label>
+        <input type="datetime-local" id="startDate" name="startDate" onfocus="colorr(this.id)" required>
       </div>
 
       <!-- End Date/Time Field -->
       <div class="form-group">
-        <label for="endDate">End Date/Time</label>
-        <input type="datetime-local" id="endDate" name="endDate" onfocus="colorr(this.id)">
+        <label for="endDate">End Date/Time *</label>
+        <input type="datetime-local" id="endDate" name="endDate" onfocus="colorr(this.id)" required>
       </div>
 
       <!-- Location Field -->
       <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location" onfocus="colorr(this.id) ">
+        <label for="location">Location *</label>
+        <input type="text" id="location" name="location" onfocus="colorr(this.id) " required>
       </div>
 
       <!-- image Field -->
       <div class="form-group">
-        <label for="image">image</label>
-        <input type="file" name="picture" id="picture" accept="image/*">
+        <label for="image">image *</label>
+        <input type="file" name="picture" id="picture" accept="image/*" required>
       </div>
 
       <!-- Description Field -->
@@ -169,7 +169,7 @@
   <p></p>
   <div class="show">
     <!-- Display image -->
-    <img id="displayedImage" alt="Displayed Image">
+    <img src="../img/activity.jpg" alt="Sun's Photo" id="displayedImage" alt="Displayed Image">
     
     <p id="demo" style="color: rgb(0, 0, 0);"></p>
   </div>

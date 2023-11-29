@@ -27,6 +27,7 @@ function show() {
   var picture = document.getElementById("picture").files[0]; // Get the file object
   var description = document.getElementById("description").value;
 
+
   // Create a string with the gathered information
   var output = "<strong><span style='color: black;'>Full Name:</span></strong> " + fullName +
     "<br><strong><span style='color: black;'>Student ID:</span></strong> " + studentID +
@@ -44,7 +45,27 @@ function show() {
   displayImage(picture);
 
   document.getElementById("demo").innerHTML = output;
+  // Check if required fields are empty
+  if (
+    fullName === "" ||
+    studentID === "" ||
+    email === "" ||
+    workTitle === "" ||
+    activityType === "" ||
+    academicYear === "" ||
+    semester === "" ||
+    startDate === "" ||
+    endDate === "" ||
+    location === ""
+  ) {
+    alert("Please fill in all required fields.");
+    return false; // Prevent form submission
+  }
 
+  // If all required fields are filled, enable the submit button
+  document.getElementById("submit").disabled = false;
+
+  return true; // Allow form submission
 
 }
 
