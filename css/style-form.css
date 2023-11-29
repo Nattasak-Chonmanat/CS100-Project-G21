@@ -289,7 +289,7 @@ a:hover {
 .dropdown-content a:hover {
   background-color: #ddd;
   transition: 0.25s;
-  border-radius: 5px;
+  border-radius: 5px; 
 }
 
 .dropdown:hover .dropdown-content {

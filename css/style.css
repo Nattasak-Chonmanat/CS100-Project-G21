@@ -50,7 +50,6 @@ a:hover {
 }
 
 .menu button{
-  width: 25%;
   height: 30px;
   border-radius: 5px;
   border: 0 white solid;
@@ -59,7 +58,6 @@ a:hover {
   width: 100%;
   background-color: #007acc;
   color:whitesmoke;
-  height: 30px;
 }
 
 
@@ -116,8 +114,35 @@ a:hover {
   align-items: center;
   background-color: #191919; 
   border-radius: 10px;
-  width: 350px;
+  width: 80%;
   height: 600px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.card-content:hover {
+  box-shadow: 9px 6px 33px -1px rgba(203,203,231,0.62);
+  -webkit-box-shadow: 9px 6px 33px -1px rgba(203,203,231,0.62);
+  -moz-box-shadow: 9px 6px 33px -1px rgba(203,203,231,0.62);
+  border-radius: 10px;
+}
+
+.text {
+  margin-top: 15%;
+  width: 80%;
+  justify-content: start;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #007acc;
 }
 
 .image-card img {
@@ -125,6 +150,11 @@ a:hover {
   border-radius: 5px;
   margin-top: 8%;
 }
+
+.click-me a {
+  color: grey;
+}
+
 
 footer {
   display: flex;
