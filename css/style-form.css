@@ -223,6 +223,9 @@ body {
 input {
   color: rgb(0, 0, 0);
 }
+textarea{
+  color: rgb(0, 0, 0);
+}
 
 a {
   transition: 0.25s;
